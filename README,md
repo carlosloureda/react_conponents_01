@@ -1,0 +1,7 @@
+#How it works
+
+This is a quick example to show how to load React library from CDN, add ReactDOM to render something to the browser.
+Also shows how to build React Elements, and convert them into React Components.
+Shows how to use React Components and JSX with the help of Babel.
+
+
