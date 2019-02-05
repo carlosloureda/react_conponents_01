@@ -6,16 +6,26 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   </head>
   <body>
-    <div id="app">
-      <h1>Hello World from HTML</h1>
-    </div>
+    <div id="app"></div>
     <script>
       const headerElement = React.createElement(
         "h1",
         { id: "header" },
         "Hello World from ReactJS"
       );
-      ReactDOM.render(headerElement, document.getElementById("app"));
+      const builtByElement = React.createElement(
+        "h2",
+        null,
+        "Built by @carlosloureda"
+      );
+      const containerElement = React.createElement(
+        "div",
+        { id: "container" },
+        headerElement,
+        builtByElement
+      );
+
+      ReactDOM.render(containerElement, document.getElementById("app"));
     </script>
   </body>
 </html>
