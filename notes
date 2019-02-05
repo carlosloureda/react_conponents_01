@@ -1,0 +1,8 @@
+- Create components but first create a react element
+  Read about React.createElement
+- Whats the DOM?
+- Now we have this element but we want to attach it to the DOM so we can show it
+- Virtual DOM
+- ReactElement vs ReactCOmponent
+    Component is a function or class that accepts inputs and returns a react element
+    - Pass them to components
