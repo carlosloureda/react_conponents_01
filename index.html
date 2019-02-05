@@ -4,25 +4,27 @@
     <title>My first React App</title>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      function headerComponent(props) {
-        return React.createElement("h1", { id: "header" }, props.title);
+    <script type="text/babel">
+      function HeaderComponent(props) {
+        return <h1 id="header">{props.title}</h1>;
       }
-      function builtByComponent(props) {
-        return React.createElement("h2", null, props.name);
+      function BuiltByComponent(props) {
+        return <h2>{props.name}</h2>;
       }
 
-      const containerElement = React.createElement(
-        "div",
-        { id: "container" },
-        headerComponent({ title: "Hello World from ReactJS" }),
-        builtByComponent({ name: "Built by @carlosloureda" })
-      );
-
-      ReactDOM.render(containerElement, document.getElementById("app"));
+      function App() {
+        return (
+          <div id="container">
+            <HeaderComponent title="Hello World from ReactJS" />
+            <BuiltByComponent name="Built by @carlosloureda" />
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById("app"));
     </script>
   </body>
 </html>
